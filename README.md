@@ -11,29 +11,51 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A development kit for Flutter projects, providing common utilities and extensions.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- `indentJson`: A utility function to pretty-print JSON strings.
+- `stringify`: A utility function to convert various data types to their string representation, handling JSON serialization for Maps and Iterables.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+### Installation
+
+Add the following to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  dev_kit: ^0.0.1
+```
+
+Then, run `flutter pub get`.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+import 'package:dev_kit/dev_kit.dart';
+
+void main() {
+  // Example usage of DevKit utilities
+  final Map<String, dynamic> data = {
+    'name': 'DevKit',
+    'version': '0.0.1',
+    'features': ['indentJson', 'stringify'],
+  };
+
+  print('Indented JSON:');
+  print(indentJson(data));
+
+  print('\nStringified value:');
+  print(stringify(123));
+  print(stringify('hello'));
+  print(stringify(data));
+}
 ```
+
+For more examples, please see the `/example` folder.
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+This package is open-source and contributions are welcome. Feel free to open issues or pull requests on the GitHub repository: https://github.com/venhdev/flutter_dev_kit
