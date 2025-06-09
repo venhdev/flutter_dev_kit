@@ -1,5 +1,5 @@
 name: dev_kit
-description: "A new Flutter package project."
+description: "A development kit for Flutter projects, providing common utilities and extensions."
 version: 0.0.1
 homepage: https://github.com/venhdev/flutter_dev_kit
 repository: https://github.com/venhdev/flutter_dev_kit
